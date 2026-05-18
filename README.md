@@ -1,5 +1,10 @@
-# pixel-snake-Game
-Pixel Snake Game with backend support
+<h1 align="center">
+  Pixel-Snake-Game
+</h1>
+
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=22&duration=3000&pause=1000&color=00FFB2&center=true&vCenter=true&width=500&lines=Pixel+Snake+Game+with+Backend+Support" />
+</p>
 <h1 align="center">
   <b>
     <img src="https://readme-typing-svg.herokuapp.com?font=Orbitron&size=28&duration=4000&pause=1000&color=00FFB2&center=true&vCenter=true&width=700&lines=🐍+Pixel+Snake+Game;🎮+Classic+Arcade+Experience;⚡+Built+with+Node.js+%26+Express.js" alt="Typing Animation" />
