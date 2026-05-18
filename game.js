@@ -18,6 +18,7 @@ function startGame() {
     menu.style.display = "none";
     canvas.style.display = "block";
     gameOverBox.style.display = "none";
+    document.getElementById("mobileControls").style.display = "flex";
 
     snake = [{ x: 200, y: 200 }];
     dx = box;
@@ -25,9 +26,7 @@ function startGame() {
     score = 0;
 
     food = generateFood();
-
     document.addEventListener("keydown", changeDirection);
-
     gameInterval = setInterval(draw, 120);
 }
 
@@ -56,7 +55,7 @@ function draw() {
         head.y >= canvas.height ||
         snake.some(s => s.x === head.x && s.y === head.y)
     ) {
-        gameOver(); // ✅ sirf call karo — andar mat daalo
+        gameOver();
         return;
     }
 
@@ -78,6 +77,14 @@ function changeDirection(e) {
     if (e.key === "ArrowRight" && dx === 0) { dx = box; dy = 0; }
 }
 
+// -------------------- MOBILE CONTROLS --------------------
+function mobileMove(direction) {
+    if (direction === 'up' && dy === 0) { dx = 0; dy = -box; }
+    if (direction === 'down' && dy === 0) { dx = 0; dy = box; }
+    if (direction === 'left' && dx === 0) { dx = -box; dy = 0; }
+    if (direction === 'right' && dx === 0) { dx = box; dy = 0; }
+}
+
 // -------------------- FOOD --------------------
 function generateFood() {
     let newFood;
@@ -97,9 +104,10 @@ function gameOver() {
 
     canvas.style.display = "none";
     gameOverBox.style.display = "flex";
+    document.getElementById("mobileControls").style.display = "none";
 
     finalScoreText.innerText = "Your Score: " + score;
-    document.getElementById("playerName").value = ""; // ✅ name clear
+    document.getElementById("playerName").value = "";
 }
 
 // -------------------- SAVE SCORE --------------------
@@ -118,7 +126,6 @@ function saveScore() {
     })
     .then(res => res.json())
     .then(data => {
-        // alert("Score Saved!");
         backToMenu();
     })
     .catch(err => console.log(err));
