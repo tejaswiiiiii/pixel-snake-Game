@@ -17,7 +17,11 @@ Pixel Snake Game with backend support
 ---
 
 <h2 align="center">🎮 About Pixel Snake</h2>
-
+<p>
+<b>Pixel Snake</b> is a retro-inspired snake game built with 
+<b>Node.js</b>, <b>Express.js</b>, <b>MongoDB</b>, <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>.
+It includes smooth gameplay, score tracking, leaderboard support, and backend data storage.
+</p>
 <p align="center">
   <i>"Eat. Grow. Survive."</i>
 </p>
@@ -38,6 +42,8 @@ The game delivers smooth controls, score tracking, responsive gameplay, and an a
   <li>🏆 Live Score Tracking</li>
   <li>💀 Game Over Detection</li>
   <li>📱 Responsive Design</li>
+  <li>💾 Score Storage with MongoDB</li>
+  <li>🏅 Leaderboard System</li>
   <li>⚡ Fast Backend with Node.js + Express</li>
 </ul>
 
@@ -47,6 +53,7 @@ The game delivers smooth controls, score tracking, responsive gameplay, and an a
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=nodejs,express,html,css,js,vscode,github&theme=dark" />
+  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,html,css,js,vscode,github&theme=dark" />
 </p>
 
 <table align="center">
