@@ -87,8 +87,4 @@ canvas {
     cursor: pointer;
 }
 
-@media (max-width: 600px) {
-    #mobileControls {
-        display: flex;
-    }
-}
+
