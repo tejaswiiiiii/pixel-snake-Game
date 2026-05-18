@@ -4,59 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake Game</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
 
-    <body>
-
-        <div id="gameOverBox" class="game-over-box">
-
-    <h2>Game Over</h2>
-
-    <p id="finalScore"></p>
-
-    <input
-        type="text"
-        id="playerName"
-        placeholder="Enter Your Name"
-    >
-
-    <button onclick="saveScore()">
-        Save Score
-    </button>
-
-</div>
+    <div id="gameOverBox" class="game-over-box">
+        <h2>Game Over</h2>
+        <p id="finalScore"></p>
+        <input type="text" id="playerName" placeholder="Enter Your Name">
+        <button onclick="saveScore()">Save Score</button>
+    </div>
 
     <div class="menu" id="menu">
-
         <h1>SNAKE GAME</h1>
-
-        <button onclick="startGame()">
-            New Game
-        </button>
-
-        <button onclick="showHighestScore()">
-            Highest Score
-        </button>
-
-        <button onclick="showLeaderboard()">
-            Leaderboard
-        </button>
-
-        <button onclick="showRules()">
-            Rules
-        </button>
-
+        <button onclick="startGame()">New Game</button>
+        <button onclick="showHighestScore()">Highest Score</button>
+        <button onclick="showLeaderboard()">Leaderboard</button>
+        <button onclick="showRules()">Rules</button>
         <div id="output"></div>
-
     </div>
 
     <canvas id="game" width="400" height="400"></canvas>
 
-    <script src="game.js"></script>
+    <!-- Mobile Controls -->
+    <div id="mobileControls">
+        <button onclick="mobileMove('up')">▲</button>
+        <div>
+            <button onclick="mobileMove('left')">◀</button>
+            <button onclick="mobileMove('down')">▼</button>
+            <button onclick="mobileMove('right')">▶</button>
+        </div>
+    </div>
 
+    <script src="game.js"></script>
 </body>
 </html>
