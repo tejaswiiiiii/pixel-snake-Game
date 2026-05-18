@@ -5,6 +5,7 @@ const menu = document.getElementById("menu");
 const gameOverBox = document.getElementById("gameOverBox");
 const finalScoreText = document.getElementById("finalScore");
 
+
 let box = 20;
 let snake;
 let food;
@@ -18,7 +19,12 @@ function startGame() {
     menu.style.display = "none";
     canvas.style.display = "block";
     gameOverBox.style.display = "none";
-    document.getElementById("mobileControls").style.display = "flex";
+
+    if (window.innerWidth <= 600) {
+        document.getElementById("mobileControls").style.display = "flex";
+    } else {
+        document.getElementById("mobileControls").style.display = "none";
+    }
 
     snake = [{ x: 200, y: 200 }];
     dx = box;
