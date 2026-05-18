@@ -53,12 +53,13 @@ The game delivers smooth controls, score tracking, responsive gameplay, and an a
 
 <p align="center">
   <img src="https://skillicons.dev/icons?i=nodejs,express,html,css,js,vscode,github&theme=dark" />
-  <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,html,css,js,vscode,github&theme=dark" />
+  <!-- <img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,html,css,js,vscode,github&theme=dark" /> -->
 </p>
 
 <table align="center">
 <tr><td>⚡ Node.js</td><td>Backend runtime</td></tr>
 <tr><td>🚀 Express.js</td><td>Server framework</td></tr>
+<tr><td>🍃 MongoDB</td><td>Database for storing scores and game data</td></tr>
 <tr><td>🧱 HTML5</td><td>Structure</td></tr>
 <tr><td>🎨 CSS3</td><td>Styling</td></tr>
 <tr><td>⚙️ JavaScript</td><td>Game logic</td></tr>
