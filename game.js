@@ -5,7 +5,6 @@ const menu = document.getElementById("menu");
 const gameOverBox = document.getElementById("gameOverBox");
 const finalScoreText = document.getElementById("finalScore");
 
-
 let box = 20;
 let snake;
 let food;
@@ -13,6 +12,8 @@ let dx, dy;
 let score = 0;
 let gameInterval;
 let playerName = "";
+
+const API = "https://pixel-snake-game-1cmm.onrender.com";
 
 // -------------------- START GAME --------------------
 function startGame() {
@@ -125,7 +126,7 @@ function saveScore() {
         return;
     }
 
-    fetch("http://localhost:3000/api/scores", {
+    fetch(`${API}/api/scores`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: playerName, score: score })
@@ -151,7 +152,7 @@ function showRules() {
 
 // -------------------- LEADERBOARD --------------------
 function showLeaderboard() {
-    fetch("http://localhost:3000/api/scores")
+    fetch(`${API}/api/scores`)
         .then(res => res.json())
         .then(data => {
             let html = "<h3>Leaderboard</h3>";
@@ -164,7 +165,7 @@ function showLeaderboard() {
 
 // -------------------- HIGHEST SCORE --------------------
 function showHighestScore() {
-    fetch("http://localhost:3000/api/scores")
+    fetch(`${API}/api/scores`)
         .then(res => res.json())
         .then(data => {
             if (data.length === 0) return;
